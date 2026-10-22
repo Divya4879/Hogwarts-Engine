@@ -1,16 +1,16 @@
 class Subject:
-    def __init__(self, name, professor_name):
+    def __init__(self, name: str, professor_name: str):
         self.name = name
         self.professor_name = professor_name
         self.students_grade = {}
 
-    def add_grade(self, student_name, score):
+    def add_grade(self, student_name: str, score: int):
         if student_name in self.students_grade:
             self.students_grade[student_name].append(score)
         else:
             self.students_grade[student_name] = [score]
 
-    def get_average(self, student_name):
+    def get_average(self, student_name: str):
         if student_name in self.students_grade:
             return sum(self.students_grade)/len(self.students_grade[student_name])
         return 0
@@ -23,7 +23,7 @@ class Subject:
 
 
 class House:
-    def __init__(self, name, head_of_house):
+    def __init__(self, name: str, head_of_house: str):
         self.name = name
         self.head_of_house = head_of_house
         self.roster = []
