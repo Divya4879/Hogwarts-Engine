@@ -1,5 +1,6 @@
 from models.academics import Subject, House
 from models.people import *
+from models.creatures import Creature
 
 potions = Subject('Potions', 'Severus Snape')
 transfiguration = Subject('Transfigurations', 'Minerva McGonagall')
@@ -37,3 +38,13 @@ minerva.award_points(hermione, 50)
 albus.award_points(harry, 100)
 
 print(gryffindor.get_house_score())
+
+dragon = Creature("Norwegian Ridgeback", 5)
+flobberworm = Creature("Flobberworm", 1)
+
+# Test the abstraction contract
+dragon.interact(harry)
+flobberworm.interact(harry)
+
+# Verify the points deduction
+print(f"Harry's points after Care of Magical Creatures: {harry.get_house_points()}")
