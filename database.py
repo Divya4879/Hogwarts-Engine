@@ -22,6 +22,15 @@ def generate_hogwarts_data() -> dict:
     luna = Student('Luna Lovegood', 'Ravenclaw', 2)
     cedric = Student('Cedric Diggory', 'Hufflepuff', 5)
 
+    unicorn = Creature('Unicorn', 1)
+    niffler = Creature('Niffler', 1)
+    bowtruckle = Creature('Bowtruckle', 2)
+    hippogriff = Creature('Hippogriff', 3)
+    acromantula = Creature('Acromantula', 4)
+    dragon = Creature('Hungarian Horntail', 5)
+    basilisk = Creature('Basilisk', 5)
+
+
     gryffindor.add_student(harry)
     slytherin.add_student(draco)
     ravenclaw.add_student(luna)
@@ -76,5 +85,10 @@ def generate_hogwarts_data() -> dict:
             ancient_runes, arithmancy, care_of_magical_creatures
             ],
         'Students' : [harry, draco, luna, cedric],
-        'Professors': [snape, mcgonagall, flitwick, sprout, lupin, babbling, vector, hagrid]
+        'Professors': [
+            snape, mcgonagall, flitwick, sprout, lupin, babbling, vector, hagrid
+            ],
+        'Creatures': [
+            unicorn, niffler, bowtruckle, hippogriff, acromantula, dragon, basilisk
+            ]
     }
