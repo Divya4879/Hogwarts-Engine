@@ -1,4 +1,4 @@
-# ⚡ Hogwarts OOP Engine
+# ⚡ Hogwarts Playground OOPS Engine
 
 [![Python](https://img.shields.io/badge/Python-3.14+-blue.svg)](https://www.python.org/)
 
