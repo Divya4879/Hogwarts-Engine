@@ -3,6 +3,16 @@ from models.creatures import Creature
 from models.people import Student, Professor
 
 def generate_hogwarts_data() -> dict:
+    """
+    Seeds the initial dataset for the Hogwarts simulation engine.
+    
+    Instantiates all base objects (Houses, Professors, Students, Creatures, Subjects)
+    and establishes their relationships, such as house enrollments and academic grades.
+
+    Returns:
+        dict: A master dictionary containing lists of all active game objects, 
+              categorized by 'Houses', 'Subjects', 'Students', 'Professors', and 'Creatures'.
+    """
     gryffindor = House('Gryffindor', 'Minerva McGonagall')
     slytherin = House('Slytherin', 'Severus Snape')
     ravenclaw = House('Ravenclaw', 'Filius Flitwick')
@@ -46,37 +56,37 @@ def generate_hogwarts_data() -> dict:
     care_of_magical_creatures = Subject('Care of Magical Creatures', 'Hagrid')
 
 
-    potions.add_grade(harry, 85)          
-    transfiguration.add_grade(harry, 75)  
-    dada.add_grade(harry, 100)            
-    charms.add_grade(harry, 75)           
-    herbology.add_grade(harry, 90)        
-    care_of_magical_creatures.add_grade(harry, 95)
+    potions.add_grade(harry.name, 85)          
+    transfiguration.add_grade(harry.name, 75)  
+    dada.add_grade(harry.name, 100)            
+    charms.add_grade(harry.name, 75)           
+    herbology.add_grade(harry.name, 90)        
+    care_of_magical_creatures.add_grade(harry.name, 95)
 
 
-    potions.add_grade(draco, 96)          
-    transfiguration.add_grade(draco, 84)  
-    charms.add_grade(draco, 82)           
-    dada.add_grade(draco, 78)             
-    herbology.add_grade(draco, 76)        
-    care_of_magical_creatures.add_grade(draco, 60)
-    ancient_runes.add_grade(draco, 89)    
+    potions.add_grade(draco.name, 96)          
+    transfiguration.add_grade(draco.name, 84)  
+    charms.add_grade(draco.name, 82)           
+    dada.add_grade(draco.name, 78)             
+    herbology.add_grade(draco.name, 76)        
+    care_of_magical_creatures.add_grade(draco.name, 60)
+    ancient_runes.add_grade(draco.name, 89)    
 
 
-    potions.add_grade(luna, 72)           
-    transfiguration.add_grade(luna, 78)   
-    charms.add_grade(luna, 92)            
-    dada.add_grade(luna, 80)              
-    herbology.add_grade(luna, 88)         
+    potions.add_grade(luna.name, 72)           
+    transfiguration.add_grade(luna.name, 78)   
+    charms.add_grade(luna.name, 92)            
+    dada.add_grade(luna.name, 80)              
+    herbology.add_grade(luna.name, 88)         
 
 
-    potions.add_grade(cedric, 88)        
-    transfiguration.add_grade(cedric, 95)  
-    charms.add_grade(cedric, 94)          
-    dada.add_grade(cedric, 92)            
-    herbology.add_grade(cedric, 90)       
-    care_of_magical_creatures.add_grade(cedric, 93)
-    arithmancy.add_grade(cedric, 85) 
+    potions.add_grade(cedric.name, 88)        
+    transfiguration.add_grade(cedric.name, 95)  
+    charms.add_grade(cedric.name, 94)          
+    dada.add_grade(cedric.name, 92)            
+    herbology.add_grade(cedric.name, 90)       
+    care_of_magical_creatures.add_grade(cedric.name, 93)
+    arithmancy.add_grade(cedric.name, 85) 
 
     return {
         'Houses': [gryffindor, slytherin, ravenclaw, hufflepuff],
